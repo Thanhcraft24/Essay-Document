@@ -1,0 +1,38 @@
+body {
+    background-color: #505050;
+    margin:0px;
+    display: flex;
+    justify-content: center;
+}
+
+.UI {
+    margin-top:260px;
+    width:500px;
+    height: 200px;
+    background-color: black;
+    border: 1px white solid;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.UI h1 {
+    font-size: 24px;
+}
+
+.UI h3 {
+    font-size: 18px;
+}
+
+.UI h4 {
+    font-size: 12px;
+}
+a {
+    color: orange;
+}
+
+a:focus {
+    color: gray;
+}

@@ -27,7 +27,8 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     border-bottom: orange solid 2px;
-    position:fixed;
+    position: fixed;
+    z-index: 1;
 }
 .search{
     display: flex;
@@ -71,15 +72,19 @@ ul li{
     margin-left:-40px;
 }
 .dropDown {
-    margin-top:201px;
+    margin-top:244px;
     margin-left:-15px;
     width: 89px;
     background-color:rgb(53, 53, 53);
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     display: none;
 }
 
+.dropDown a {
+    color: white;
+    text-decoration: none;
+}
 .dropDown li{
     width: 129px;
     display: block;
@@ -108,7 +113,7 @@ ul li:hover ul.dropDown {
     margin-left: 10px;
 }
 .button {
-    margin:15px;
+    margin:30px;
     width: 90px;
     height: 35px;
     border: white solid 1px;
@@ -123,28 +128,75 @@ ul li:hover ul.dropDown {
     color:black;
     cursor: pointer;
 }
+.HidenAcc {
+    margin-left:10px;
+    margin-top:-38px;
+    height: 75px;
+    width:142px;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
 
+.HidenAcc img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.HidenAcc:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.dropDown2 {
+    position: absolute;
+    margin-left:-72px;
+    margin-top:27px;
+    width: 103px;
+    background-color:rgb(53, 53, 53);
+    z-index: 999;
+    display: none;
+}
+
+.dropDown2 li{
+    width: 143px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-top:12px;
+}
+
+.dropDown2 a {
+    color:white;
+    text-decoration: none;
+}
+.dropDown2 li:hover{
+    background-color: grey;
+    cursor:pointer;
+}
+ul li:hover ul.dropDown2 {
+    display: block;
+}
 .Middle {
     width: 100%;
-    height: 1500px;
+    height: 1200px;
 }
 
 .Midbody {
+    padding-top: 20px;
     background-color: black;
     width: 1200px;
     margin-left:140px;
-    height: 1500px;
-    padding-top:20px;
+    height: 1200px;
 }
 
-.body {
-    border: 1px white solid;
-    width: 1000px;
-    height: 952px;
-    margin-left:40px;
-}
 .MidHeader {
-    border: 1px white solid;
     width: 1000px;
     height: 525px;
     margin-left:40px;
@@ -153,7 +205,6 @@ ul li:hover ul.dropDown {
 .col1 {
     width:375px;
     height: 100%;
-    border-right: #505050 2px solid;
 }
 
 .col2 {
@@ -191,7 +242,6 @@ ul li:hover ul.dropDown {
     height: 40px;
     display: flex;
     align-items: center;
-    border-top: #505050 2px solid;
 }
 .ratingScore {
     background-color: #6AE0EE;
@@ -239,7 +289,6 @@ ul li:hover ul.dropDown {
 .ratingBar2 {
     width: 100%;
     height: 30px;
-    border-bottom:2px #505050 solid;
 }
 
 .type {
@@ -261,23 +310,183 @@ ul li:hover ul.dropDown {
 .type a:hover {
     color:orange;
 }
-.button2 {
-    margin:15px;
-    width: 120px;
-    height: 40px;
-    border: white solid 1px;
-    border-radius: 6px;
-    color: white;
-    font-size: 16px;
-    background-color: black;
+
+.body {
+    width: 1000px;
+    height: 952px;
+    margin-left:40px;
 }
 
-.button2:hover {
-    color:black;
-    background-color: orange;
+.radio {
+    bottom: 100px;
+    width:100px;
+    height: 40px;
+    margin-left:-1px;
+    position: absolute;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.radio:hover {
     cursor: pointer;
 }
 
+.radio:checked ~ .TabBox {
+    display: block;
+}
+
+.li {
+    margin-left:10px;
+    border-left:1px #505050 solid;
+    width: 100px;
+    height: 40px;
+    color:white;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin-top:10px;
+    margin-left:11px;
+    cursor: pointer;
+}
+.Tab {
+    display: flex;
+    align-items: center;
+    margin:0px;
+    height: 50px;
+    border:1px grey solid;
+}
+.Tab li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.TabBox {
+    position: absolute;
+    margin-top:10px;
+    width: 1000px;
+    height: 450px;
+    color: white;
+    left: 180px;
+    display:none;
+    background-color: black;
+}
+
+.subTabBox1 {
+    border: 1px white solid;
+    border-radius: 5px;
+    color:white;
+    width: 875px;
+    height: 425px;
+    margin:10px 0px 0px 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display:flex;
+    justify-content: center;
+}
+
+.EpButton {   
+    margin:5px;
+    width:30px;
+    height: 30px;
+    color:white;
+    background-color: #505050;
+    border: white 1px solid;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.EpButton:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.subTabBox2 {
+    border: 1px white solid;
+    border-radius: 5px;
+    color:white;
+    width: 875px;
+    height: 425px;
+    margin:10px 0px 0px 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display:flex;
+    justify-content: center;
+}
+
+.subTabBox3 {
+    border: 1px white solid;
+    border-radius: 5px;
+    color:white;
+    width: 875px;
+    height: 425px;
+    margin:10px 0px 0px 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display:flex;
+    justify-content: center;
+}
+
+.subTabBox3 a {
+    text-decoration: none;
+}
+.VideoBox {
+    margin:0px 5px 0px 5px;
+    border: 2px grey dashed;
+    border-radius: 10px;
+    width:156px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.VideoBox img {
+    margin-top:5px;
+    width: 140px;
+    height: 75%;
+}
+
+.VideoBoxName {
+    margin-top:10px;
+    color:white;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.subTabBoxTitle {
+    width: 85%;
+    height: 25px;
+    margin-top:10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #505050;
+    border-radius: 7px;
+}
+
+.subTabBoxBody {
+    padding: 7px;
+    border-top: 1px #505050 solid;
+    bottom:15px;
+    color:white;
+    width: 861px;
+    height: 365px;
+    display: flex;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    position: absolute;
+}
 .footer {
     width:100%;
     height:500px;
@@ -300,8 +509,7 @@ ul li:hover ul.dropDown {
     margin-left:140px;
     display: flex;
     align-items: center;
-    border-top:1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top:1px grey solid;
 }
 .col3{
     width: 150px;

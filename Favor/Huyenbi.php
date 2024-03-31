@@ -7,21 +7,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FptCartoon</title>
-    <link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="Favor.css">
 </head>
 <body>
     <div class='heading'>
         <div class='searchMenu'>
-            <a href="./MainMenu.php"><img src='./Images/TitleIcon.png' class='titleIcon'></a>
+            <a href="/MainMenu/MainMenu.php"><img src='/MainMenu/Images/TitleIcon.png' class='titleIcon'></a>
             <div class='search'>
-                <img src='./Images/SearchIcon.png' class='searchIcon'>
+                <img src='/MainMenu/Images/SearchIcon.png' class='searchIcon'>
                 <input type='search' placeholder='Tên phim ...' class='search-input'>
             </div>
             <ul>
                 <li>
                     <div class='menu'>
                         Thể Loại
-                        <img src='./Images/ArrowIcon.png' class='arrowIcon'>
+                        <img src='/MainMenu/Images/ArrowIcon.png' class='arrowIcon'>
                         <ul class='dropDown'>
                             <li><a href='/MainMenu/Favor/Hanhdong.php'>Hành Động</a></li>
                             <li><a href='/MainMenu/Favor/Phieuluu.php'>Phiêu Lưu</a></li>
@@ -37,11 +37,11 @@
                 echo "<ul>
                 <li>
                     <div class='HidenAcc'>
-                        <img src='./Images/UserIcon.png'>";
+                        <img src='/MainMenu/Images/UserIcon.png'>";
                         echo $_SESSION['name'];
                         echo "<ul class='dropDown2'>
                             <li>Thông tin</li>
-                            <li><a href='logout.php'>Đăng Xuất</a></li>
+                            <li><a href='/MainMenu/logout.php'>Đăng Xuất</a></li>
                         </ul>
                     </div>
                 </li>
@@ -54,22 +54,43 @@
     </div>
     <div class='middle'>
         <div class='Midbody'>
-            <div id='middle'>
-            <?php
-            if (isset($_SESSION['name'])) {
-                echo "<script src='MainMenu.js'></script>";
-            } else {
-                echo "<script src='MainMenuLoginProduct.js'></script>";
-            }
-            ?></div>
+            <div class='TitleFavor'>
+                <div class='Title'>Thể loại Huyền Bí</div>
+            </div>
+            <div class='MidFavor'>
+                <a href="/MainMenu/SubPage/SubPage3.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime3.jpg" alt="" class="img">
+                    <div class='Fname'>MASHLE</div>
+                </div></a>
+                <a href="/MainMenu/SubPage/SubPage4.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime4.jpg" alt="" class="img">
+                    <div class='Fname'>Solo Leveling</div>
+                </div></a>
+                <a href="/MainMenu/SubPage/SubPage5.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime5.jpg" alt="" class="img">
+                    <div class='Fname'>Blue Exorcist</div>
+                </div></a>
+                <a href="/MainMenu/SubPage/SubPage7.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime7.jpg" alt="" class="img">
+                    <div class='Fname'>Black Clover</div>
+                </div></a>
+                <a href="/MainMenu/SubPage/SubPage8.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime8.jpg" alt="" class="img">
+                    <div class='Fname'>Moonlit Fantasy</div>
+                </div></a>
+                <a href="/MainMenu/SubPage/SubPage9.php" class='FavorName'><div class='ProductFavor'>
+                    <img src="/MainMenu/Images/anime9.jpg" alt="" class="img">
+                    Frieren, Funeral Wiard
+                </div></a>
+            </div>
         </div>
     </div>
     <div class='footer'>
             <div class='subFooter'>
                 <div class='col1'>
-                    <div><img src="Images\TitleIcon.png"></div>
-                    <div><img src='./Images/logo1.png' class='icon2'></div>
-                    <div><img src='Images\logo2.png'></div>
+                    <div><img src="/MainMenu/Images\TitleIcon.png"></div>
+                    <div><img src='/MainMenu/Images/logo1.png' class='icon2'></div>
+                    <div><img src='/MainMenu/Images\logo2.png'></div>
                 </div>
 
                 <div class='col2'>
@@ -97,17 +118,17 @@
                 </div>
                 <div class='col1'>
                     <div class='row3'>
-                        <img src='./Images/PhoneIcon.png' class='icon'>
+                        <img src='/MainMenu/Images/PhoneIcon.png' class='icon'>
                         19006600
                     </div>
                     <div class='row3'>
-                        <img src='./Images/MailIcon.png' class='mailIcon'>
+                        <img src='/MainMenu/Images/MailIcon.png' class='mailIcon'>
                         hotrofptplay.com
                     </div>
                     <div class='row3'>Theo dõi chúng tôi trên:</div>
                     <div class='row3'>
-                        <button class='buttonIcon'><img src='./Images/fbkIcon.png'></button>
-                        <button class='buttonIcon'><img src='./Images/ytbIcon.png'></button>
+                        <button class='buttonIcon'><img src='/MainMenu/Images/fbkIcon.png'></button>
+                        <button class='buttonIcon'><img src='/MainMenu/Images/ytbIcon.png'></button>
                     </div>
                 </div>
             </div>
@@ -118,7 +139,7 @@
                 <div class='row4'>Giấy phép cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng Internet cấp lần đầu ngày 18/11/2016, cấp lại theo Giấy phép số 99/GP-BTTTT ngày 27/03/2023.</div>
             </div>
             <div class='deviceIcon'>
-                <img src='./Images/DevicePlatformIcon.png'>
+                <img src='/MainMenu/Images/DevicePlatformIcon.png'>
             </div>
         </div>
     </div>
